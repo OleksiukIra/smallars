@@ -1,0 +1,101 @@
+.header{
+    .header__wrapper{
+        display: flex;
+        align-items: center;
+    .header__logo{
+        font-size: 30px;
+        font-weight: 900;
+        font-family: 'Montserrat', sans-serif;
+        padding: 40px 30px 50px 0;
+        color: #3c3d42;
+    }
+    #check-menu{
+        padding: 10px 15px;
+        color: #fff;
+        display: none;
+   }
+    .navigation{
+        .navigation__check{
+            padding: 10px 15px;
+            color: #fff;
+            display: none;
+        }
+       .main-menu{
+        display: flex;
+        margin-right: 200px;
+        & li{
+            padding-right: 30px;
+            .menu__link{
+                text-decoration: none;
+                .font;
+                transition: color .6s linear;
+                &:hover{
+                    color: @hovercolor;
+                }
+            }
+        }
+       }
+    }
+    .header__contacts{
+        display: flex;
+        & .fa{
+            padding-right: 10px;
+            font-size: 20px;
+            color: #3c3d42;;
+
+        }
+        & a{
+            margin-right: 40px;
+            text-decoration: none;
+            color: #3c3d42;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+        }
+        }
+    }
+}
+@media screen and (min-width:320px) and (max-width:992px){
+    .header{
+        .header__wrapper{
+            flex-direction: column;
+            .navigation{
+                .main-menu{
+                    display: none;
+                    flex-direction: column;
+                    & li{
+                        padding: 25px 15px 0;
+                    }
+                    & a{
+                        transition: color .7s linear;
+                        &:hover{
+                            color: @hovercolor;
+                        }
+                    }
+                }
+                .navigation__check{
+                    color: @titlecolor;
+                    display: block;
+                    cursor: pointer;
+                    margin-right: 280px;
+                    &::after{
+                        content: attr(data-open);
+                        display: block;
+                    }
+                }  
+        }
+        #check-menu:checked + nav[role="navigation"] .main-menu{
+            display: block;
+        }
+        #check-menu:checked + nav[role="navigation"] .navigation__check::after{
+            content: attr(data-close);
+        }
+    .header__contacts{
+        margin-top: 40px;
+        & a{
+            font-size: 14px;
+            margin: 5px 20px 20px 0;
+        }
+    }
+}
+}
+}

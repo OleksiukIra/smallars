@@ -1,0 +1,100 @@
+.testimonials{
+    .testimonials__title{
+        color: @titlecolor;
+        margin: 100px auto 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .testimonials__container{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 25%;
+        & input{
+            display: none;
+        }
+        .carusel__items{
+            width: 300%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: left .5s ease-out;
+            .carusel__item{
+                display: block;
+                float: left;
+                width: 33.33333333%;
+                height: 100%;
+                & img{
+                    padding-bottom: 40px;
+                }
+                & p{
+                    .font;
+                    font-size: 24px;
+                    font-style: italic;
+                    padding-bottom: 30px;
+                }
+                & .autor{
+                    color: @hovercolor;
+                }
+            }
+        }
+        .carusel__labels{
+            position: absolute;
+            z-index: 2;
+            bottom: 20px;
+            height: 20px;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            .carusel__label{
+                display: inline-block;
+                & label{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    background-color: @textcolor;
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+        }
+        #user_1:checked ~ .carusel__items{
+            left: 0;
+        }
+        #user_1:checked ~ .carusel__labels .carusel__label:nth-child(1) label {
+            background-color: @hovercolor;
+        }
+        #user_2:checked ~ .carusel__items {
+             left: -100%;
+        }
+        #user_2:checked ~ .carusel__labels .carusel__label:nth-child(2) label {
+            background-color: @hovercolor;
+        }
+        #user_3:checked ~ .carusel__items {
+            left: -200%;
+        }
+        #user_3:checked ~ .carusel__labels .carusel__label:nth-child(3) label {
+            background-color: @hovercolor;
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:992px){
+    .testimonials{
+    .testimonials__title{
+        margin: 45px auto 40px;
+        font-size: 25px;
+    }
+    .testimonials__container{
+        padding-top: 215px;
+        .carusel__item{
+            & p{
+                font-size: 18px;
+                }
+            }
+        }
+    }
+}

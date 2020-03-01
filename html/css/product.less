@@ -1,0 +1,30 @@
+.product{
+    background: url(../img/bg/product.jpg) no-repeat;
+    background-size: cover;
+        .product__info{
+            width: 45%;
+            padding: 160px 0 190px 0;
+            }
+        }
+        .product__img{
+            right: 120px;
+            top: 70px;
+        }
+
+@media screen and (min-width:320px) and (max-width:992px){
+    .product{
+        .product__info{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 50px;
+            .product__title{
+                margin-bottom: 30px;
+                &::after{
+                display: none;
+            }
+        }
+        }
+    }
+}

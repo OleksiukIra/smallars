@@ -1,0 +1,102 @@
+@import url('header.less');
+@import url('slider.less');
+@import url('feature.less');
+@import url('product.less');
+@import url('gallery.less');
+@import url('geature.less');
+@import url('testimonials.less');
+@import url('newsletter.less');
+@import url('footer.less');
+
+html { overflow-x: hidden; }
+body { overflow-x: hidden; }
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+@titlecolor: #636c6c;
+@textcolor: #aeb6b7;
+@hovercolor: #5dca88;
+@linkcolor: #7d7e81;
+
+.font{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: @linkcolor;
+}
+.title{
+    font-family:'Open Sans', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+}
+.container{
+    max-width:1170px;
+    margin:0 auto;
+    position: relative;
+}
+.btn{
+    width: 235px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 55px;
+    .title;
+    font-size: 21px;
+    padding-top: 12px;
+    transition: background-color .7s linear ;
+    &:hover{
+         background-color: @hovercolor;
+    }
+} 
+.gray{
+    color: #8c9494;
+}
+.center{
+    text-align: center;
+    margin: 48px auto;
+}
+.feature__title{
+    .title;
+    text-align: center;
+    color: @titlecolor;
+    padding: 100px 0 35px 0;
+}
+.feature__text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: @textcolor;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 764px;
+    padding-bottom: 70px;
+}
+
+.product__title{
+    color: @hovercolor;
+    position: relative;
+    margin-bottom: 65px;
+    line-height: 1.2;
+    &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100px;
+        height: 3px;
+        background-color: #949c9c;
+        bottom: -25px;
+    }
+}
+.product__btn{
+    border-color: #aab2b5;
+    color:#aab2b5;
+    padding-top: 18px;
+    transition: color .7s linear;
+    &:hover{
+        color: white;
+    }
+}
+
